@@ -152,10 +152,10 @@ Eventually, the MPC controller was applied to the task of holding a metal ball a
 The implementation is contained in a single file (`main.py`) with the following key components:
 
 * [**MPCBall Class**](https://github.com/VladSarm/MagneticLevitationMPC/blob/main/main.py#L10): Defines the system dynamics and control methods
-* [**Simulation Function**](https://github.com/VladSarm/MagneticLevitationMPC/blob/main/main.py#L141C9-L169C17): Integrates the equations of motion using `solve_ivp` via RK4 scheme
-* [**Controller**](https://github.com/VladSarm/MagneticLevitationMPC/blob/main/main.py#L128): Enable PD controller for Acrobot stabilization
-* [**Visualization Functions**](https://github.com/VladSarm/MagneticLevitationMPC/blob/main/main.py#L272): Generates plots and animations
-* [**Command-Line Interface**](https://github.com/VladSarm/MagneticLevitationMPC/blob/main/main.py#L357): Uses `tyro` for argument parsing
+* [**Simulation Function**](https://github.com/VladSarm/MagneticLevitationMPC/blob/main/main.py#L175-L188): Integrates the equations of motion using `solve_mpc`
+* [**Controller**](https://github.com/VladSarm/MagneticLevitationMPC/blob/main/main.py#L75-L140): Enable MPC controller for Magnetic Levitation stabilization
+* [**Visualization Functions**](https://github.com/VladSarm/MagneticLevitationMPC/blob/main/main.py#L279-L351): Generates plots and animations
+
 
 
 
