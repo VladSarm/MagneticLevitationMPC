@@ -146,6 +146,8 @@ Eventually, the MPC controller was applied to the task of holding a metal ball a
   <em>Full stabilization of the Magnetic Levitation system using an MPC controller</em>
 </p>
 
+Based on the graphs and visualizations obtained, it can be concluded that the MPC controller copes well with the task. The metal ball moves quickly enough to a given height without much hesitation.
+
 
 ## 👨‍💻 Code Structure
 
