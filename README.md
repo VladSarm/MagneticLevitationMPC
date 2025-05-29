@@ -98,9 +98,10 @@ $$
 
 ### Control Strategy in Detail
 
-The MPC controller is implemented using CasADi. The controller predicts the future trajectory of the ball and adjusts the control input $u$ to minimize the error between the predicted and desired trajectory.
+The MPC controller is implemented using CasADi. The controller predicts the future trajectory of the ball and adjusts the control input $u$ to minimize the error between the predicted and desired trajectory. For monimization we use the following cost function:
 
-## 📊 Experiments Definition
+
+
 
 ## 📊 Results and Discussion
 
@@ -121,6 +122,15 @@ Eventually, the MPC controller was applied to the task of holding a metal ball a
 </p>
 
 
+## 👨‍💻 Code Structure
+
+The implementation is contained in a single file (`main.py`) with the following key components:
+
+* [**MPCBall Class**](https://github.com/VladSarm/MagneticLevitationMPC/blob/main/main.py#L10): Defines the system dynamics and control methods
+* [**Simulation Function**](https://github.com/VladSarm/MagneticLevitationMPC/blob/main/main.py#L141C9-L169C17): Integrates the equations of motion using `solve_ivp` via RK4 scheme
+* [**Controller**](https://github.com/VladSarm/MagneticLevitationMPC/blob/main/main.py#L128): Enable PD controller for Acrobot stabilization
+* [**Visualization Functions**](https://github.com/VladSarm/MagneticLevitationMPC/blob/main/main.py#L272): Generates plots and animations
+* [**Command-Line Interface**](https://github.com/VladSarm/MagneticLevitationMPC/blob/main/main.py#L357): Uses `tyro` for argument parsing
 
 
 
