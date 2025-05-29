@@ -117,6 +117,8 @@ where:
 - $r = 0.5$: desired position of the ball
 - $N = 100$: prediction horizon
 
+The right part of the equation is the terminal cost, which is used to penalize the deviation of the ball from the target position at the end of the prediction horizon.
+
 The optimization problem is defined as $\min_{\mathbf{u}, \mathbf{x}}  J$ subject to the following constraints:
 
 $$
