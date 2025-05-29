@@ -128,11 +128,13 @@ The optimization problem is defined as $\min_{\mathbf{u}, \mathbf{x}}  J$ subjec
 
 
 $$
+\begin{equation}
 \begin{align*}
 \mathbf{x}[0] = \mathbf{x}_{\text{current}} \\
 \mathbf{x}[k+1] = f(\mathbf{x}[k], u[k]) \quad \forall k = 0,\dots,N-1 \\
 0 \leq u[k] \leq u_{\text{max}}
 \end{align*}
+\end{equation}
 $$
 
 
