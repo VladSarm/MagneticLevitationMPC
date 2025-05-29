@@ -1,5 +1,14 @@
 # MagneticLevitationMPC
 
+This project demonstrates a Model Predictive Control (MPC) implementation for stabilizing a magnetic levitation system (maglev) where a ball is suspended in air using electromagnetic forces. The system is visualized using Pygame with real-time control.
+
+<p align="center">
+  <img src="gfx/MagneticLevitationMPC/movie.mp4" alt="full stabilization of maglev" width="400">
+</p>
+<p align="center">
+  <em>Full stabilization of the Magnetic Levitation system using an MPC controller</em>
+</p>
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -31,7 +40,6 @@ This alternative simulation output will be saved to `gfx/MagneticLevitationMPC/`
 ## 🧠 Technical Background
 
 
-This project demonstrates a Model Predictive Control (MPC) implementation for stabilizing a magnetic levitation system (maglev) where a ball is suspended in air using electromagnetic forces. The system is visualized using Pygame with real-time control.
 
 ### Physics of the Magnetic Levitation System
 
