@@ -103,18 +103,18 @@ $$
 The MPC controller is implemented using CasADi. The controller predicts the future trajectory of the ball and adjusts the control input $u$ to minimize the error between the predicted and desired trajectory. For monimization we use the following cost function:
 
 $$
-\begin{equation}
-J = \sum_{k=0}^{N-1} \underbrace{
-    \vphantom{\frac{1}{2}} Q_1 (x_1[k] - r)^2 + 
+J = \sum_{k=0}^{N-1} 
+    \left(
+    \frac{1}{2} Q_1 (x_1[k] - r)^2 + 
     Q_2 x_2[k]^2 + 
     R u[k]^2
-}_{\text{Stage Cost}}
-+ \underbrace{
+    \right)
++ 
     Q_1 (x_1[N] - r)^2 + 
     Q_2 x_2[N]^2
-}_{\text{Terminal Cost}}
-\end{equation}
+
 $$
+
 
 where:
 - $x_1[k]$: position of the ball at time $k$
@@ -128,15 +128,13 @@ where:
 
 The optimization problem is defined as $\min_{\mathbf{u}, \mathbf{x}}  J$ subject to the following constraints:
 
-
 $$
-\begin{align*}
-\begin{equation}
+
+\begin{aligned}
 \mathbf{x}[0] = \mathbf{x}_{\text{current}} \\
 \mathbf{x}[k+1] = f(\mathbf{x}[k], u[k]) \quad \forall k = 0,\dots,N-1 \\
 0 \leq u[k] \leq u_{\text{max}}
-\end{equation}
-\end{align*}
+\end{aligned}
 $$
 
 
