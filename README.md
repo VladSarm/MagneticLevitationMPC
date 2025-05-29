@@ -126,6 +126,7 @@ where:
 
 The optimization problem is defined as $\min_{\mathbf{u}, \mathbf{x}}  J$ subject to the following constraints:
 
+
 $$
 \begin{align*}
 \mathbf{x}[0] = \mathbf{x}_{\text{current}} \\
