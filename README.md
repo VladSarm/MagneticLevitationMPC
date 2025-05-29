@@ -103,7 +103,7 @@ $$
 The MPC controller is implemented using CasADi. The controller predicts the future trajectory of the ball and adjusts the control input $u$ to minimize the error between the predicted and desired trajectory. For monimization we use the following cost function:
 
 $$
-J = \sum_{k=0}^{N-1} \left(\frac{1}{2} Q_1 (x_1[k] - r)^2 + Q_2 x_2[k]^2 + R u[k]^2 \right)+ Q_1 (x_1[N] - r)^2 + Q_2 x_2[N]^2
+J = \sum_{k=0}^{N-1} \left( Q_1 (x_1[k] - r)^2 + Q_2 x_2[k]^2 + R u[k]^2 \right)+ Q_1 (x_1[N] - r)^2 + Q_2 x_2[N]^2
 $$
 
 
